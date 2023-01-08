@@ -1,0 +1,63 @@
+ALGORITHM checkpointalgo
+
+VAR
+
+   x,y,z,i:= INTEGER ;
+
+   sentence:= STRING[] ;
+
+BEGIN
+             // z + 1 is the number of characters                                                       
+  z:= 0 ; 
+             // y     is the word count 
+  y:= 1 ;
+             // x     is the vowel number   
+  x:= 0;
+
+  i:= sentence.length-1 ;
+
+  
+  write("write the sentence");
+
+  read(sentence);
+  WHILE  (sentence[i] <> ".") THEN
+    write("Please do not forget the point at the end of the sentence");
+      read(sentence);
+  END_WHILE
+ 
+
+
+
+
+
+
+    REPEAT
+        IF (sentence[z]=" ") THEN
+
+             y:=y+1 ;
+
+        END_IF
+
+        IF (sentence[z] in ["a","e","u","i","o","y"] or sentence[z] in ["A","E","U","I","O","Y"] ) THEN
+
+             x:=x +1 ;
+
+        END_IF
+
+             z:=z+1 ;
+
+    UNTIL (sentence[z]=".");
+
+ 
+   
+ 
+
+
+
+   write (" The word count is ",y);
+   
+   write( " The number of characters is ",z+1 );
+
+   write ( " The vowel number is ",x);
+
+END

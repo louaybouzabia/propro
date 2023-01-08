@@ -1,0 +1,25 @@
+ALGORITHM checkpointalgo2.algo
+VAR
+    x,y,z := INTEGER;
+    array_arr1 : ARRAY_OF INTEGER[arr1.length];
+    array_arr2 : ARRAY_OF INTEGER[arr2.length];
+BEGIN
+    x := 0;
+    y := arr1.length-1;
+    z := arr2.length-1;,
+    FOR i FROM 0 TO y STEP 1  DO
+        FOR j FROM 0 TO z STEP 1  DO
+            IF (arr1[i] <> arr2[j]) THEN
+                x = x + arr1[i];
+                arr2[j]=0
+            END_IF
+        END_FOR
+    END_FOR
+    FOR i FROM 1 TO z STEP 1  DO
+                   x = x + arr2[i];
+     END_FOR
+    
+    write (" The sum of all distinct elements from the set egal ", x);
+
+   
+END
